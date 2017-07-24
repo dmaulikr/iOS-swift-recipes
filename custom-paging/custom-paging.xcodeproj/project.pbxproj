@@ -310,6 +310,7 @@
 				529D78DF1F212A8600B1589C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
