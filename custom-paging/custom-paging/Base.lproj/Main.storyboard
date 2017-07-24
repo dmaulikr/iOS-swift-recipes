@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,38 +26,59 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dwe-II-ed2">
-                                <rect key="frame" x="157.5" y="333" width="60" height="1"/>
+                                <rect key="frame" x="139.5" y="499.5" width="95" height="2"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7o-dW-rLp">
-                                        <rect key="frame" x="0.0" y="0.0" width="25" height="1"/>
-                                        <color key="backgroundColor" red="0.38431372549999998" green="0.63529411759999999" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="GAg-cW-mKQ"/>
+                                            <constraint firstAttribute="height" constant="2" id="GAg-cW-mKQ"/>
                                             <constraint firstAttribute="width" constant="25" id="LPN-0g-rgb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzS-2r-4p9">
-                                        <rect key="frame" x="35" y="0.0" width="25" height="1"/>
+                                        <rect key="frame" x="35" y="0.0" width="25" height="2"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="XsW-dp-Ln3"/>
+                                            <constraint firstAttribute="height" constant="2" id="XsW-dp-Ln3"/>
                                             <constraint firstAttribute="width" constant="25" id="giF-NT-jBK"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHJ-CP-oPu">
+                                        <rect key="frame" x="70" y="0.0" width="25" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="AwA-Xv-rFH"/>
+                                            <constraint firstAttribute="width" constant="25" id="Opl-rv-089"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3L-Rg-JsJ">
+                                <rect key="frame" x="139.5" y="499.5" width="25" height="2"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="0E1-7X-pLQ"/>
+                                    <constraint firstAttribute="height" constant="2" id="Lts-mO-cCt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SrS-cY-gFd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J19-Ri-g4C"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SrS-cY-gFd" secondAttribute="bottom" id="Qsf-Os-O86"/>
-                            <constraint firstItem="dwe-II-ed2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fqy-Rx-Vsi"/>
+                            <constraint firstItem="dwe-II-ed2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="fqy-Rx-Vsi"/>
                             <constraint firstItem="SrS-cY-gFd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iK5-4y-uCN"/>
                             <constraint firstAttribute="trailing" secondItem="SrS-cY-gFd" secondAttribute="trailing" id="mgs-T8-LNp"/>
+                            <constraint firstItem="g3L-Rg-JsJ" firstAttribute="leading" secondItem="Q7o-dW-rLp" secondAttribute="leading" id="qw6-zT-NR7"/>
+                            <constraint firstItem="g3L-Rg-JsJ" firstAttribute="centerY" secondItem="Q7o-dW-rLp" secondAttribute="centerY" id="uyj-Tq-0D3"/>
                             <constraint firstItem="dwe-II-ed2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yyy-QV-S7F"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentPage" destination="g3L-Rg-JsJ" id="AXs-3p-nDK"/>
+                        <outlet property="currentPageXConstraint" destination="qw6-zT-NR7" id="Hvu-q6-4ej"/>
+                        <outlet property="indicator" destination="g3L-Rg-JsJ" id="ddG-Fl-bhC"/>
                         <outlet property="pageIndicator" destination="dwe-II-ed2" id="QAh-sg-czA"/>
                         <outlet property="scrollView" destination="SrS-cY-gFd" id="BWe-pt-38B"/>
                     </connections>
