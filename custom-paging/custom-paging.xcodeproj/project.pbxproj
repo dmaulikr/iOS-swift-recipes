@@ -63,8 +63,8 @@
 				529D78D21F212A8600B1589C /* Main.storyboard */,
 				529D78D51F212A8600B1589C /* Assets.xcassets */,
 				529D78D71F212A8600B1589C /* LaunchScreen.storyboard */,
-				529D78DA1F212A8600B1589C /* Info.plist */,
 				529D78E11F213D4700B1589C /* PageView.xib */,
+				529D78DA1F212A8600B1589C /* Info.plist */,
 				529D78E31F213D9300B1589C /* PageView.swift */,
 			);
 			path = "custom-paging";
